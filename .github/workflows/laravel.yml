@@ -28,7 +28,7 @@ jobs:
       fail-fast: false
       matrix:
         php-version: ['8.2', '8.3', '8.4']
-        laravel-version: ['10.*', '11.*']
+        laravel-version: ['10.*', '11.*', '12.*']
     
     name: PHP ${{ matrix.php-version }} - Laravel ${{ matrix.laravel-version }}
     
@@ -52,7 +52,8 @@ jobs:
     
     - name: Install dependencies
       run: |
-        composer require "illuminate/database:${{ matrix.laravel-version }}" "illuminate/support:${{ matrix.laravel-version }}" --no-update
+        composer require "illuminate/database:${{ matrix.laravel-version }}" "illuminate/support:${{ matrix.laravel-version }}" --no-update --with-all-dependencies
+        composer require "nikic/php-parser:^5.0" --no-update --dev
         composer install --prefer-dist --no-progress --no-interaction
     
     - name: Run PHPStan
