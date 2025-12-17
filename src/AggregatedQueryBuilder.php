@@ -360,6 +360,14 @@ final class AggregatedQueryBuilder
             }
 
             if ($this->offsetValue !== null) {
+                $driver = DB::connection()->getDriverName();
+
+                if ($this->limitValue === null && $driver === 'mysql') {
+                    $sql .= "\nLIMIT 18446744073709551615";
+                } elseif ($this->limitValue === null && $driver === 'sqlite') {
+                    $sql .= "\nLIMIT -1";
+                }
+
                 $sql .= "\nOFFSET " . $this->offsetValue;
             }
         }
