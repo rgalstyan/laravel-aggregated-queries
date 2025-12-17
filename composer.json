@@ -11,23 +11,32 @@
     "json",
     "aggregate",
     "performance",
-    "sql"
+    "sql",
+    "eager-loading",
+    "query-optimization"
   ],
   "authors": [
     {
       "name": "Razmik Galstyan",
-      "email": "galstyanrazmik1988@gmail.com"
+      "email": "galstyanrazmik1988@gmail.com",
+      "homepage": "https://github.com/rgalstyan"
     }
   ],
+  "homepage": "https://github.com/rgalstyan/laravel-aggregated-queries",
+  "support": {
+    "issues": "https://github.com/rgalstyan/laravel-aggregated-queries/issues",
+    "source": "https://github.com/rgalstyan/laravel-aggregated-queries",
+    "docs": "https://github.com/rgalstyan/laravel-aggregated-queries/blob/main/README.md"
+  },
   "require": {
-    "php": "^8.1",
+    "php": "^8.2",
     "illuminate/database": "^10.0 || ^11.0 || ^12.0",
     "illuminate/support": "^10.0 || ^11.0 || ^12.0"
   },
   "require-dev": {
     "orchestra/testbench": "^8.0 || ^9.0 || ^10.0",
-    "phpunit/phpunit": "^10.0",
-    "phpstan/phpstan": "^1.10",
+    "phpunit/phpunit": "^10.0 || ^11.0",
+    "phpstan/phpstan": "^1.10 || ^2.0",
     "laravel/pint": "^1.0"
   },
   "autoload": {
@@ -50,8 +59,19 @@
   "scripts": {
     "test": "vendor/bin/phpunit",
     "test:coverage": "vendor/bin/phpunit --coverage-html coverage",
-    "phpstan": "vendor/bin/phpstan analyse",
-    "format": "vendor/bin/pint"
+    "phpstan": "vendor/bin/phpstan analyse src --level=9",
+    "phpstan:baseline": "vendor/bin/phpstan analyse src --level=9 --generate-baseline",
+    "format": "vendor/bin/pint",
+    "check": [
+      "@phpstan",
+      "@test"
+    ]
+  },
+  "config": {
+    "sort-packages": true,
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
   },
   "minimum-stability": "stable",
   "prefer-stable": true

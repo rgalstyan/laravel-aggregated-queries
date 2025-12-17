@@ -5,12 +5,13 @@ declare(strict_types=1);
 namespace Rgalstyan\LaravelAggregatedQueries\Tests\Unit\Hydrators;
 
 use Illuminate\Database\Eloquent\Model;
+use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 use Rgalstyan\LaravelAggregatedQueries\Hydrators\ArrayHydrator;
 
 final class ArrayHydratorTest extends TestCase
 {
-    /** @test */
+    #[Test]
     public function it_hydrates_and_decodes_json_relations(): void
     {
         $hydrator = new ArrayHydrator();

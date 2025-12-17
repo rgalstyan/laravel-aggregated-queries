@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Rgalstyan\LaravelAggregatedQueries\Tests\Feature;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use PHPUnit\Framework\Attributes\Test;
 use Rgalstyan\LaravelAggregatedQueries\Tests\Fixtures\Models\Partner;
 use Rgalstyan\LaravelAggregatedQueries\Tests\Fixtures\Models\Profile;
 use Rgalstyan\LaravelAggregatedQueries\Tests\TestCase;
@@ -19,7 +20,7 @@ final class BelongsToRelationTest extends TestCase
         parent::setUp();
     }
 
-    /** @test */
+    #[Test]
     public function it_handles_null_belongs_to_relation(): void
     {
         Partner::query()->create(['name' => 'Orphan Partner']);
@@ -32,7 +33,7 @@ final class BelongsToRelationTest extends TestCase
         self::assertNull($result['profile'], 'Relation should be null when no record exists.');
     }
 
-    /** @test */
+    #[Test]
     public function it_selects_specific_columns_from_relation(): void
     {
         $profile = Profile::query()->create(['name' => 'Jane', 'avatar' => 'avatar.png']);

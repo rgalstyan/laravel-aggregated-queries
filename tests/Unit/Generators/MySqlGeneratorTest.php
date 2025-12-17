@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Rgalstyan\LaravelAggregatedQueries\Tests\Unit\Generators;
 
+use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 use Rgalstyan\LaravelAggregatedQueries\Generators\MySqlGenerator;
 
@@ -17,7 +18,7 @@ final class MySqlGeneratorTest extends TestCase
         $this->generator = new MySqlGenerator('partners', 'base');
     }
 
-    /** @test */
+    #[Test]
     public function it_generates_json_object_for_belongs_to(): void
     {
         $metadata = [
@@ -32,7 +33,7 @@ final class MySqlGeneratorTest extends TestCase
         self::assertSame($expected, $sql, 'Generated JSON object SQL should match MySQL syntax.');
     }
 
-    /** @test */
+    #[Test]
     public function it_generates_count_subquery(): void
     {
         $metadata = [
@@ -46,7 +47,7 @@ final class MySqlGeneratorTest extends TestCase
         self::assertSame($expected, $sql, 'COUNT subquery must reference base alias and foreign key.');
     }
 
-    /** @test */
+    #[Test]
     public function it_generates_json_array_subquery_for_collections(): void
     {
         $metadata = [
@@ -61,7 +62,7 @@ final class MySqlGeneratorTest extends TestCase
         self::assertSame($expected, $sql, 'HasMany collections should be represented by subqueries with JSON_ARRAYAGG.');
     }
 
-    /** @test */
+    #[Test]
     public function it_builds_select_clause_with_relations(): void
     {
         $relations = [
@@ -114,7 +115,7 @@ final class MySqlGeneratorTest extends TestCase
         self::assertSame($expected, $sql, 'Select clause should concatenate base columns with relation projections.');
     }
 
-    /** @test */
+    #[Test]
     public function it_builds_join_clause_for_belongs_to(): void
     {
         $relations = [

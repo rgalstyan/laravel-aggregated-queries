@@ -88,12 +88,12 @@ At scale (10,000 API requests/day):
 
 ## Requirements
 
-| Component | Version |
-|-----------|---------|
-| PHP | ^8.1 |
+| Component | Version                 |
+|-----------|-------------------------|
+| PHP | ^8.2                    |
 | Laravel | ^10.0 \| ^11.0 \| ^12.0 |
-| MySQL | ^8.0 |
-| PostgreSQL | ^12.0 |
+| MySQL | ^8.0                    |
+| PostgreSQL | ^12.0                   |
 
 ---
 

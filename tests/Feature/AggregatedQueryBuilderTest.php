@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Rgalstyan\LaravelAggregatedQueries\Tests\Feature;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use PHPUnit\Framework\Attributes\Test;
 use Rgalstyan\LaravelAggregatedQueries\Tests\Fixtures\Models\Country;
 use Rgalstyan\LaravelAggregatedQueries\Tests\Fixtures\Models\Partner;
 use Rgalstyan\LaravelAggregatedQueries\Tests\Fixtures\Models\Profile;
@@ -35,7 +36,7 @@ final class AggregatedQueryBuilderTest extends TestCase
         Partner::query()->create(['name' => 'Partner B']);
     }
 
-    /** @test */
+    #[Test]
     public function it_loads_belongs_to_relation_as_json(): void
     {
         $result = Partner::aggregatedQuery()
@@ -48,7 +49,7 @@ final class AggregatedQueryBuilderTest extends TestCase
         self::assertEquals('John Doe', $result['profile']['name']);
     }
 
-    /** @test */
+    #[Test]
     public function it_loads_multiple_relations(): void
     {
         $result = Partner::aggregatedQuery()
@@ -61,7 +62,7 @@ final class AggregatedQueryBuilderTest extends TestCase
         self::assertEquals('USA', $result['country']['name']);
     }
 
-    /** @test */
+    #[Test]
     public function it_loads_has_many_collection(): void
     {
         $result = Partner::aggregatedQuery()
@@ -73,7 +74,7 @@ final class AggregatedQueryBuilderTest extends TestCase
         self::assertCount(2, $result['promocodes']);
     }
 
-    /** @test */
+    #[Test]
     public function it_applies_where_clauses(): void
     {
         $results = Partner::aggregatedQuery()
@@ -85,7 +86,7 @@ final class AggregatedQueryBuilderTest extends TestCase
         self::assertSame('Partner B', $results->first()['name']);
     }
 
-    /** @test */
+    #[Test]
     public function it_accepts_existing_base_query(): void
     {
         Partner::query()->create(['name' => 'Partner Filtered']);
@@ -105,7 +106,7 @@ final class AggregatedQueryBuilderTest extends TestCase
         self::assertSame('John Doe', $results->first()['profile']['name']);
     }
 
-    /** @test */
+    #[Test]
     public function it_applies_order_by(): void
     {
         $results = Partner::aggregatedQuery()
@@ -115,7 +116,7 @@ final class AggregatedQueryBuilderTest extends TestCase
         self::assertSame('Partner B', $results->first()['name']);
     }
 
-    /** @test */
+    #[Test]
     public function it_applies_limit(): void
     {
         Partner::query()->create(['name' => 'Partner C']);
@@ -128,7 +129,7 @@ final class AggregatedQueryBuilderTest extends TestCase
         self::assertCount(2, $results);
     }
 
-    /** @test */
+    #[Test]
     public function it_applies_offset(): void
     {
         $results = Partner::aggregatedQuery()
@@ -139,7 +140,7 @@ final class AggregatedQueryBuilderTest extends TestCase
         self::assertSame('Partner B', $results->first()['name']);
     }
 
-    /** @test */
+    #[Test]
     public function it_applies_limit_and_offset(): void
     {
         Partner::query()->create(['name' => 'Partner C']);
@@ -155,7 +156,7 @@ final class AggregatedQueryBuilderTest extends TestCase
         self::assertSame('Partner B', $results->first()['name']);
     }
 
-    /** @test */
+    #[Test]
     public function it_loads_all_columns_with_asterisk(): void
     {
         $result = Partner::aggregatedQuery()
@@ -171,7 +172,7 @@ final class AggregatedQueryBuilderTest extends TestCase
         self::assertSame('avatar.jpg', $result['profile']['avatar']);
     }
 
-    /** @test */
+    #[Test]
     public function it_executes_minimal_queries_with_multiple_relations(): void
     {
         // Enable query logging

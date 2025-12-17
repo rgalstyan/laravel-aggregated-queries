@@ -1,0 +1,9 @@
+/vendor/
+/.idea/
+/.phpunit.result.cache
+/.php-cs-fixer.cache
+composer.lock
+.phpunit.cache/
+.php-cs-fixer.cache
+/node_modules/
+config/reference.php

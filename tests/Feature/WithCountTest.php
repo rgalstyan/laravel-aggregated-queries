@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Rgalstyan\LaravelAggregatedQueries\Tests\Feature;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use PHPUnit\Framework\Attributes\Test;
 use Rgalstyan\LaravelAggregatedQueries\Tests\Fixtures\Models\Partner;
 use Rgalstyan\LaravelAggregatedQueries\Tests\Fixtures\Models\Promocode;
 use Rgalstyan\LaravelAggregatedQueries\Tests\TestCase;
@@ -19,7 +20,7 @@ final class WithCountTest extends TestCase
         parent::setUp();
     }
 
-    /** @test */
+    #[Test]
     public function it_adds_count_for_relation(): void
     {
         $partner = Partner::query()->create(['name' => 'Partner Count']);

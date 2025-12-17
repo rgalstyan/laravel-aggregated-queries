@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Rgalstyan\LaravelAggregatedQueries\Tests\Unit\Generators;
 
+use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 use Rgalstyan\LaravelAggregatedQueries\Generators\PostgresGenerator;
 
@@ -17,7 +18,7 @@ final class PostgresGeneratorTest extends TestCase
         $this->generator = new PostgresGenerator('partners', 'base');
     }
 
-    /** @test */
+    #[Test]
     public function it_generates_json_object_using_postgres_functions(): void
     {
         $metadata = [
@@ -32,7 +33,7 @@ final class PostgresGeneratorTest extends TestCase
         self::assertSame($expected, $sql, 'Postgres JSON object should rely on json_build_object.');
     }
 
-    /** @test */
+    #[Test]
     public function it_generates_count_subquery_for_postgres(): void
     {
         $metadata = [
@@ -46,7 +47,7 @@ final class PostgresGeneratorTest extends TestCase
         self::assertSame($expected, $sql, 'COUNT syntax should match SQL standard.');
     }
 
-    /** @test */
+    #[Test]
     public function it_generates_json_array_subquery_for_has_many(): void
     {
         $metadata = [
@@ -61,7 +62,7 @@ final class PostgresGeneratorTest extends TestCase
         self::assertSame($expected, $sql, 'Postgres collections should use json_agg.');
     }
 
-    /** @test */
+    #[Test]
     public function it_builds_select_clause_with_json_build_object(): void
     {
         $relations = [
@@ -114,7 +115,7 @@ final class PostgresGeneratorTest extends TestCase
         self::assertSame($expected, $sql, 'Select clause should use Postgres JSON helpers.');
     }
 
-    /** @test */
+    #[Test]
     public function it_builds_join_clause_for_belongs_to_relations(): void
     {
         $relations = [
