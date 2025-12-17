@@ -16,17 +16,18 @@ abstract class TestCase extends OrchestraTestCase
 
     protected function getEnvironmentSetUp($app): void
     {
-        $driver = env('TEST_DB_CONNECTION', 'sqlite');
+        $driver = env('TEST_DB_CONNECTION', env('DB_CONNECTION', 'mysql'));
 
         $app['config']->set('database.default', 'testing');
+
         $app['config']->set('database.connections.testing', match ($driver) {
             'mysql' => [
                 'driver' => 'mysql',
-                'host' => env('TEST_DB_HOST', '127.0.0.1'),
-                'port' => env('TEST_DB_PORT', 3306),
-                'database' => env('TEST_DB_DATABASE', 'aggregated_queries_test'),
-                'username' => env('TEST_DB_USERNAME', 'root'),
-                'password' => env('TEST_DB_PASSWORD', 'password'),
+                'host' => env('TEST_DB_HOST', env('DB_HOST', '127.0.0.1')),
+                'port' => env('TEST_DB_PORT', env('DB_PORT', 3306)),
+                'database' => env('TEST_DB_DATABASE', env('DB_DATABASE', 'test_db')),
+                'username' => env('TEST_DB_USERNAME', env('DB_USERNAME', 'root')),
+                'password' => env('TEST_DB_PASSWORD', env('DB_PASSWORD', 'root')),
                 'charset' => 'utf8mb4',
                 'collation' => 'utf8mb4_unicode_ci',
                 'prefix' => '',
@@ -47,7 +48,7 @@ abstract class TestCase extends OrchestraTestCase
 
     protected function skipIfRequiredExtensionMissing(): void
     {
-        $driver = env('TEST_DB_CONNECTION', 'sqlite');
+        $driver = env('TEST_DB_CONNECTION', env('DB_CONNECTION', 'mysql'));
         $extension = match ($driver) {
             'mysql' => 'pdo_mysql',
             'pgsql' => 'pdo_pgsql',
