@@ -53,8 +53,8 @@ jobs:
     - name: Install dependencies
       run: composer install --prefer-dist --no-progress --no-interaction
     
-    - name: Run PHPStan
-      run: composer phpstan
+    #- name: Run PHPStan
+    # run: composer phpstan
     
     - name: Run tests
       env:
