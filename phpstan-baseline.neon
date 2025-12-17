@@ -1,0 +1,481 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Call to an undefined method Illuminate\\Database\\Eloquent\\Model\:\:getDeletedAtColumn\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: src/AggregatedQueryBuilder.php
+
+		-
+			message: '#^Call to function is_array\(\) with array\<string, string\> will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: src/AggregatedQueryBuilder.php
+
+		-
+			message: '#^Cannot access offset ''related_model'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: src/AggregatedQueryBuilder.php
+
+		-
+			message: '#^Cannot access offset ''relation'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: src/AggregatedQueryBuilder.php
+
+		-
+			message: '#^Cannot access offset ''table'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: src/AggregatedQueryBuilder.php
+
+		-
+			message: '#^Method Rgalstyan\\LaravelAggregatedQueries\\AggregatedQueryBuilder\:\:__construct\(\) has parameter \$baseQuery with generic class Illuminate\\Database\\Eloquent\\Builder but does not specify its types\: TModel$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/AggregatedQueryBuilder.php
+
+		-
+			message: '#^Method Rgalstyan\\LaravelAggregatedQueries\\AggregatedQueryBuilder\:\:first\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/AggregatedQueryBuilder.php
+
+		-
+			message: '#^Method Rgalstyan\\LaravelAggregatedQueries\\AggregatedQueryBuilder\:\:first\(\) should return array\|Illuminate\\Database\\Eloquent\\Model\|null but returns mixed\.$#'
+			identifier: return.type
+			count: 1
+			path: src/AggregatedQueryBuilder.php
+
+		-
+			message: '#^Method Rgalstyan\\LaravelAggregatedQueries\\AggregatedQueryBuilder\:\:get\(\) return type with generic class Illuminate\\Support\\Collection does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/AggregatedQueryBuilder.php
+
+		-
+			message: '#^Method Rgalstyan\\LaravelAggregatedQueries\\AggregatedQueryBuilder\:\:getBindings\(\) should return array\<int, bool\|float\|int\|string\|null\> but returns list\<mixed\>\.$#'
+			identifier: return.type
+			count: 1
+			path: src/AggregatedQueryBuilder.php
+
+		-
+			message: '#^Method Rgalstyan\\LaravelAggregatedQueries\\AggregatedQueryBuilder\:\:hydrationMetadata\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/AggregatedQueryBuilder.php
+
+		-
+			message: '#^Method Rgalstyan\\LaravelAggregatedQueries\\AggregatedQueryBuilder\:\:paginate\(\) return type with generic class Illuminate\\Pagination\\LengthAwarePaginator does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/AggregatedQueryBuilder.php
+
+		-
+			message: '#^Method Rgalstyan\\LaravelAggregatedQueries\\AggregatedQueryBuilder\:\:tryResolveColumnsFromModel\(\) should return array\<int, string\> but returns array\<mixed, mixed\>\.$#'
+			identifier: return.type
+			count: 1
+			path: src/AggregatedQueryBuilder.php
+
+		-
+			message: '#^Parameter \#1 \$model of method Rgalstyan\\LaravelAggregatedQueries\\AggregatedQueryBuilder\:\:tryResolveColumnsFromModel\(\) expects Illuminate\\Database\\Eloquent\\Model, object given\.$#'
+			identifier: argument.type
+			count: 2
+			path: src/AggregatedQueryBuilder.php
+
+		-
+			message: '#^Parameter \#1 \$table of static method Illuminate\\Support\\Facades\\Schema\:\:getColumnListing\(\) expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/AggregatedQueryBuilder.php
+
+		-
+			message: '#^Parameter \#3 \.\.\.\$values of function sprintf expects bool\|float\|int\|string\|null, mixed given\.$#'
+			identifier: argument.type
+			count: 2
+			path: src/AggregatedQueryBuilder.php
+
+		-
+			message: '#^Possibly invalid array key type mixed\.$#'
+			identifier: offsetAccess.invalidOffset
+			count: 4
+			path: src/AggregatedQueryBuilder.php
+
+		-
+			message: '#^Property Rgalstyan\\LaravelAggregatedQueries\\AggregatedQueryBuilder\:\:\$baseQuery with generic class Illuminate\\Database\\Eloquent\\Builder does not specify its types\: TModel$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/AggregatedQueryBuilder.php
+
+		-
+			message: '#^Strict comparison using \!\=\= between string and null will always evaluate to true\.$#'
+			identifier: notIdentical.alwaysTrue
+			count: 1
+			path: src/AggregatedQueryBuilder.php
+
+		-
+			message: '#^Unable to resolve the template type T in call to function array_values$#'
+			identifier: argument.templateType
+			count: 1
+			path: src/AggregatedQueryBuilder.php
+
+		-
+			message: '#^Method Rgalstyan\\LaravelAggregatedQueries\\Contracts\\HydratorInterface\:\:hydrate\(\) return type with generic class Illuminate\\Support\\Collection does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/Contracts/HydratorInterface.php
+
+		-
+			message: '#^Method Rgalstyan\\LaravelAggregatedQueries\\Contracts\\RelationResolverInterface\:\:resolve\(\) has parameter \$relation with generic class Illuminate\\Database\\Eloquent\\Relations\\Relation but does not specify its types\: TRelatedModel, TDeclaringModel, TResult$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/Contracts/RelationResolverInterface.php
+
+		-
+			message: '#^Method Rgalstyan\\LaravelAggregatedQueries\\Contracts\\RelationResolverInterface\:\:supports\(\) has parameter \$relation with generic class Illuminate\\Database\\Eloquent\\Relations\\Relation but does not specify its types\: TRelatedModel, TDeclaringModel, TResult$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/Contracts/RelationResolverInterface.php
+
+		-
+			message: '#^Cannot access offset ''alias'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: src/Generators/MySqlGenerator.php
+
+		-
+			message: '#^Cannot access offset ''foreign_key'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: src/Generators/MySqlGenerator.php
+
+		-
+			message: '#^Cannot access offset ''local_key'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: src/Generators/MySqlGenerator.php
+
+		-
+			message: '#^Cannot access offset ''owner_key'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: src/Generators/MySqlGenerator.php
+
+		-
+			message: '#^Cannot access offset ''relation'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: src/Generators/MySqlGenerator.php
+
+		-
+			message: '#^Cannot access offset ''table'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: src/Generators/MySqlGenerator.php
+
+		-
+			message: '#^Parameter \#1 \$metadata of method Rgalstyan\\LaravelAggregatedQueries\\Generators\\MySqlGenerator\:\:generateCount\(\) expects array\<string, string\>, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Generators/MySqlGenerator.php
+
+		-
+			message: '#^Parameter \#1 \$metadata of method Rgalstyan\\LaravelAggregatedQueries\\Generators\\MySqlGenerator\:\:generateJsonArray\(\) expects array\<string, string\>, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Generators/MySqlGenerator.php
+
+		-
+			message: '#^Parameter \#1 \$metadata of method Rgalstyan\\LaravelAggregatedQueries\\Generators\\MySqlGenerator\:\:generateJsonObject\(\) expects array\<string, string\>, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Generators/MySqlGenerator.php
+
+		-
+			message: '#^Parameter \#2 \$columns of method Rgalstyan\\LaravelAggregatedQueries\\Generators\\MySqlGenerator\:\:generateJsonArray\(\) expects array\<int, string\>, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Generators/MySqlGenerator.php
+
+		-
+			message: '#^Parameter \#2 \$columns of method Rgalstyan\\LaravelAggregatedQueries\\Generators\\MySqlGenerator\:\:generateJsonObject\(\) expects array\<int, string\>, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Generators/MySqlGenerator.php
+
+		-
+			message: '#^Parameter \#2 \$relationName of method Rgalstyan\\LaravelAggregatedQueries\\Generators\\MySqlGenerator\:\:generateCount\(\) expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Generators/MySqlGenerator.php
+
+		-
+			message: '#^Parameter \#2 \.\.\.\$values of function sprintf expects bool\|float\|int\|string\|null, mixed given\.$#'
+			identifier: argument.type
+			count: 3
+			path: src/Generators/MySqlGenerator.php
+
+		-
+			message: '#^Parameter \#3 \$relationName of method Rgalstyan\\LaravelAggregatedQueries\\Generators\\MySqlGenerator\:\:generateJsonArray\(\) expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Generators/MySqlGenerator.php
+
+		-
+			message: '#^Parameter \#3 \$relationName of method Rgalstyan\\LaravelAggregatedQueries\\Generators\\MySqlGenerator\:\:generateJsonObject\(\) expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Generators/MySqlGenerator.php
+
+		-
+			message: '#^Parameter \#3 \.\.\.\$values of function sprintf expects bool\|float\|int\|string\|null, mixed given\.$#'
+			identifier: argument.type
+			count: 2
+			path: src/Generators/MySqlGenerator.php
+
+		-
+			message: '#^Parameter \#4 \.\.\.\$values of function sprintf expects bool\|float\|int\|string\|null, mixed given\.$#'
+			identifier: argument.type
+			count: 2
+			path: src/Generators/MySqlGenerator.php
+
+		-
+			message: '#^Parameter \#5 \.\.\.\$values of function sprintf expects bool\|float\|int\|string\|null, mixed given\.$#'
+			identifier: argument.type
+			count: 2
+			path: src/Generators/MySqlGenerator.php
+
+		-
+			message: '#^Parameter \#7 \.\.\.\$values of function sprintf expects bool\|float\|int\|string\|null, mixed given\.$#'
+			identifier: argument.type
+			count: 2
+			path: src/Generators/MySqlGenerator.php
+
+		-
+			message: '#^Cannot access offset ''alias'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: src/Generators/PostgresGenerator.php
+
+		-
+			message: '#^Cannot access offset ''foreign_key'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: src/Generators/PostgresGenerator.php
+
+		-
+			message: '#^Cannot access offset ''local_key'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: src/Generators/PostgresGenerator.php
+
+		-
+			message: '#^Cannot access offset ''owner_key'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: src/Generators/PostgresGenerator.php
+
+		-
+			message: '#^Cannot access offset ''relation'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: src/Generators/PostgresGenerator.php
+
+		-
+			message: '#^Cannot access offset ''table'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: src/Generators/PostgresGenerator.php
+
+		-
+			message: '#^Parameter \#1 \$metadata of method Rgalstyan\\LaravelAggregatedQueries\\Generators\\PostgresGenerator\:\:generateCount\(\) expects array\<string, string\>, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Generators/PostgresGenerator.php
+
+		-
+			message: '#^Parameter \#1 \$metadata of method Rgalstyan\\LaravelAggregatedQueries\\Generators\\PostgresGenerator\:\:generateJsonArray\(\) expects array\<string, string\>, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Generators/PostgresGenerator.php
+
+		-
+			message: '#^Parameter \#1 \$metadata of method Rgalstyan\\LaravelAggregatedQueries\\Generators\\PostgresGenerator\:\:generateJsonObject\(\) expects array\<string, string\>, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Generators/PostgresGenerator.php
+
+		-
+			message: '#^Parameter \#2 \$columns of method Rgalstyan\\LaravelAggregatedQueries\\Generators\\PostgresGenerator\:\:generateJsonArray\(\) expects array\<int, string\>, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Generators/PostgresGenerator.php
+
+		-
+			message: '#^Parameter \#2 \$columns of method Rgalstyan\\LaravelAggregatedQueries\\Generators\\PostgresGenerator\:\:generateJsonObject\(\) expects array\<int, string\>, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Generators/PostgresGenerator.php
+
+		-
+			message: '#^Parameter \#2 \$relationName of method Rgalstyan\\LaravelAggregatedQueries\\Generators\\PostgresGenerator\:\:generateCount\(\) expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Generators/PostgresGenerator.php
+
+		-
+			message: '#^Parameter \#2 \.\.\.\$values of function sprintf expects bool\|float\|int\|string\|null, mixed given\.$#'
+			identifier: argument.type
+			count: 3
+			path: src/Generators/PostgresGenerator.php
+
+		-
+			message: '#^Parameter \#3 \$relationName of method Rgalstyan\\LaravelAggregatedQueries\\Generators\\PostgresGenerator\:\:generateJsonArray\(\) expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Generators/PostgresGenerator.php
+
+		-
+			message: '#^Parameter \#3 \$relationName of method Rgalstyan\\LaravelAggregatedQueries\\Generators\\PostgresGenerator\:\:generateJsonObject\(\) expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Generators/PostgresGenerator.php
+
+		-
+			message: '#^Parameter \#3 \.\.\.\$values of function sprintf expects bool\|float\|int\|string\|null, mixed given\.$#'
+			identifier: argument.type
+			count: 2
+			path: src/Generators/PostgresGenerator.php
+
+		-
+			message: '#^Parameter \#4 \.\.\.\$values of function sprintf expects bool\|float\|int\|string\|null, mixed given\.$#'
+			identifier: argument.type
+			count: 2
+			path: src/Generators/PostgresGenerator.php
+
+		-
+			message: '#^Parameter \#5 \.\.\.\$values of function sprintf expects bool\|float\|int\|string\|null, mixed given\.$#'
+			identifier: argument.type
+			count: 2
+			path: src/Generators/PostgresGenerator.php
+
+		-
+			message: '#^Parameter \#7 \.\.\.\$values of function sprintf expects bool\|float\|int\|string\|null, mixed given\.$#'
+			identifier: argument.type
+			count: 2
+			path: src/Generators/PostgresGenerator.php
+
+		-
+			message: '#^Trait Rgalstyan\\LaravelAggregatedQueries\\HasAggregatedQueries is used zero times and is not analysed\.$#'
+			identifier: trait.unused
+			count: 1
+			path: src/HasAggregatedQueries.php
+
+		-
+			message: '#^Method Rgalstyan\\LaravelAggregatedQueries\\Hydrators\\ArrayHydrator\:\:decodeJsonValue\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Hydrators/ArrayHydrator.php
+
+		-
+			message: '#^Method Rgalstyan\\LaravelAggregatedQueries\\Hydrators\\ArrayHydrator\:\:decodeJsonValue\(\) should return array\|bool\|float\|int\|string\|null but returns mixed\.$#'
+			identifier: return.type
+			count: 1
+			path: src/Hydrators/ArrayHydrator.php
+
+		-
+			message: '#^Method Rgalstyan\\LaravelAggregatedQueries\\Hydrators\\ArrayHydrator\:\:hydrate\(\) return type with generic class Illuminate\\Support\\Collection does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/Hydrators/ArrayHydrator.php
+
+		-
+			message: '#^Parameter \#1 \$value of method Rgalstyan\\LaravelAggregatedQueries\\Hydrators\\ArrayHydrator\:\:decodeJsonValue\(\) expects bool\|float\|int\|string\|null, array\|bool\|float\|int\|string\|null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Hydrators/ArrayHydrator.php
+
+		-
+			message: '#^Method Rgalstyan\\LaravelAggregatedQueries\\Hydrators\\EloquentHydrator\:\:filterBaseAttributes\(\) has parameter \$row with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Hydrators/EloquentHydrator.php
+
+		-
+			message: '#^Method Rgalstyan\\LaravelAggregatedQueries\\Hydrators\\EloquentHydrator\:\:hydrate\(\) return type with generic class Illuminate\\Support\\Collection does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/Hydrators/EloquentHydrator.php
+
+		-
+			message: '#^Parameter \#1 \$attributes of method Illuminate\\Database\\Eloquent\\Model\:\:newInstance\(\) expects array\<string, mixed\>, array\<mixed, mixed\> given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Hydrators/EloquentHydrator.php
+
+		-
+			message: '#^Parameter \#1 \$callback of method Illuminate\\Support\\Collection\<\(int\|string\),mixed\>\:\:map\(\) expects callable\(mixed, int\|string\)\: Illuminate\\Database\\Eloquent\\Model, Closure\(array\)\: Illuminate\\Database\\Eloquent\\Model given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Hydrators/EloquentHydrator.php
+
+		-
+			message: '#^Method Rgalstyan\\LaravelAggregatedQueries\\RelationResolvers\\BelongsToResolver\:\:resolve\(\) has parameter \$relation with generic class Illuminate\\Database\\Eloquent\\Relations\\Relation but does not specify its types\: TRelatedModel, TDeclaringModel, TResult$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/RelationResolvers/BelongsToResolver.php
+
+		-
+			message: '#^Method Rgalstyan\\LaravelAggregatedQueries\\RelationResolvers\\BelongsToResolver\:\:supports\(\) has parameter \$relation with generic class Illuminate\\Database\\Eloquent\\Relations\\Relation but does not specify its types\: TRelatedModel, TDeclaringModel, TResult$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/RelationResolvers/BelongsToResolver.php
+
+		-
+			message: '#^PHPDoc tag @var for variable \$relation contains generic class Illuminate\\Database\\Eloquent\\Relations\\BelongsTo but does not specify its types\: TRelatedModel, TDeclaringModel$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/RelationResolvers/BelongsToResolver.php
+
+		-
+			message: '#^Method Rgalstyan\\LaravelAggregatedQueries\\RelationResolvers\\HasManyResolver\:\:resolve\(\) has parameter \$relation with generic class Illuminate\\Database\\Eloquent\\Relations\\Relation but does not specify its types\: TRelatedModel, TDeclaringModel, TResult$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/RelationResolvers/HasManyResolver.php
+
+		-
+			message: '#^Method Rgalstyan\\LaravelAggregatedQueries\\RelationResolvers\\HasManyResolver\:\:supports\(\) has parameter \$relation with generic class Illuminate\\Database\\Eloquent\\Relations\\Relation but does not specify its types\: TRelatedModel, TDeclaringModel, TResult$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/RelationResolvers/HasManyResolver.php
+
+		-
+			message: '#^PHPDoc tag @var for variable \$relation contains generic class Illuminate\\Database\\Eloquent\\Relations\\HasMany but does not specify its types\: TRelatedModel, TDeclaringModel$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/RelationResolvers/HasManyResolver.php
+
+		-
+			message: '#^Method Rgalstyan\\LaravelAggregatedQueries\\RelationResolvers\\HasOneResolver\:\:resolve\(\) has parameter \$relation with generic class Illuminate\\Database\\Eloquent\\Relations\\Relation but does not specify its types\: TRelatedModel, TDeclaringModel, TResult$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/RelationResolvers/HasOneResolver.php
+
+		-
+			message: '#^Method Rgalstyan\\LaravelAggregatedQueries\\RelationResolvers\\HasOneResolver\:\:supports\(\) has parameter \$relation with generic class Illuminate\\Database\\Eloquent\\Relations\\Relation but does not specify its types\: TRelatedModel, TDeclaringModel, TResult$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/RelationResolvers/HasOneResolver.php
+
+		-
+			message: '#^PHPDoc tag @var for variable \$relation contains generic class Illuminate\\Database\\Eloquent\\Relations\\HasOne but does not specify its types\: TRelatedModel, TDeclaringModel$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/RelationResolvers/HasOneResolver.php
+
+		-
+			message: '#^Method Rgalstyan\\LaravelAggregatedQueries\\Support\\RelationAnalyzer\:\:invokeRelation\(\) return type with generic class Illuminate\\Database\\Eloquent\\Relations\\Relation does not specify its types\: TRelatedModel, TDeclaringModel, TResult$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/Support/RelationAnalyzer.php
