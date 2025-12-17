@@ -51,10 +51,7 @@ jobs:
           ${{ runner.os }}-php-${{ matrix.php-version }}-laravel-${{ matrix.laravel-version }}-
     
     - name: Install dependencies
-      run: |
-        composer require "illuminate/database:${{ matrix.laravel-version }}" "illuminate/support:${{ matrix.laravel-version }}" --no-update --with-all-dependencies
-        composer require "nikic/php-parser:^5.0" --no-update --dev
-        composer install --prefer-dist --no-progress --no-interaction
+      run: composer install --prefer-dist --no-progress --no-interaction
     
     - name: Run PHPStan
       run: composer phpstan
