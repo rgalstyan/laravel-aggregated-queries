@@ -530,7 +530,7 @@ final class AggregatedQueryBuilder
         // Collect tables that still have wildcards
         $tablesToResolve = [];
         foreach ($this->relations as $relation) {
-            if ($relation['columns'] === ['*'] && isset($relation['metadata']['table'])) {
+            if (($relation['columns'] ?? null) === ['*'] && isset($relation['metadata']['table'])) {
                 $tablesToResolve[] = $relation['metadata']['table'];
             }
         }
@@ -567,11 +567,12 @@ final class AggregatedQueryBuilder
 
         // Replace wildcards with actual columns
         foreach ($this->relations as &$relation) {
-            if ($relation['columns'] === ['*']) {
+            if (($relation['columns'] ?? null) === ['*'] && isset($relation['metadata']['table'])) {
                 $table = $relation['metadata']['table'];
                 $relation['columns'] = $this->columnListingsCache[$table] ?? [];
             }
         }
+        unset($relation);
     }
 
     private function compileWheres(): string
